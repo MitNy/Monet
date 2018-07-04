@@ -1,0 +1,48 @@
+body {
+    margin:0;
+    padding:0;
+}
+#bar {
+    margin:auto;
+    width:auto;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+#bar img {
+    max-height: 50px;
+    padding-left:15px;
+}
+
+#bar a {
+    float:right;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#bar a:hover {
+    color:white;
+    background-color: black;
+}
+
+
+
+#bar .active {
+    color:white;
+    background-color: black;    
+}
+
+
+footer {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+
+
+
