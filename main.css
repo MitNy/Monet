@@ -22,15 +22,20 @@ body {
 }
 
 #bar a:hover {
-    color:white;
-    background-color: black;
+    color:black;
+    background-color:whitesmoke;
+    border-bottom: 0.1px solid black;
 }
 
-
+#bar a:visited {
+    color:black;
+    border-bottom: 0.1px solid black;
+}
 
 #bar .active {
-    color:white;
-    background-color: black;    
+    color:black;
+    background-color: whitesmoke;
+    border-bottom: 0.1px solid black;
 }
 
 
