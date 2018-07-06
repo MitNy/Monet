@@ -2058,123 +2058,56 @@ overflow:hidden;
 
 
 /*Columns*/
-.one_half, .one_third, .two_third, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {
-position:relative;
-margin-right: 4%;
-min-height: 1px;
-height: auto !important;
+.card {
+  width: auto;
+
+  height: 200px;
+  background: white;
+  border-radius: 100px 10px 10px 100px;
+  display: flex;
+}
+.ie {
+  color: #fff;
+  font-size: .7em;
+  opacity: .3;
+}
+.content {
+  padding: 20px;
+}
+.content h1 {
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+.content p {
+  margin: 0;
+  padding: 0;
+}
+svg {
+  border: 3px solid #999;
+  width: 200px;
+  height: 100%;
+  flex-shrink: 0;
+  background: url('https://cdn2.iconfinder.com/data/icons/ballicons-2-free/100/wrench-512.png') no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
-.one_group {
-position:relative;
-margin-right: 4%;
-float: left;
-min-height: 1px;
-height: auto !important;
-    width: 22%;
-} 
-
-.one_fourth {
-width: 22%;
+.card > img {
+    width:200px;
+    border-radius: 50%;
 }
-
-.three_fourth {
-width: 74%;
-}
-
-.one_fifth {
-width: 16.8%;
-}
-
-.two_fifth {
-width: 37.6%;
-}
-
-.three_fifth {
-width: 58.4%;
-}
-
-.four_fifth {
-width: 79.2%;
-}
-
-.one_sixth {
-width: 13.3333%;
-}
-
-.three_sixth {
-width: 47.9998%;
-}
-
-.five_sixth {
-width: 82.6665%;
-}
-
-.last {
-margin-right: 0 !important;
-clear: right;
-}
-
-.clearboth {
-clear: both;
-display: block;
-font-size: 0;
-height: 0;
-line-height: 0;
-width: 100%;
-}
-
-.spacer {
-height: 15px;
-}
-
-.one_half .one_half {
-margin-right: 8.3333%;
-width: 45.8333%;
-}
-
-.one_half .one_third {
-margin-right: 8.3333%;
-width: 27.7778%;
-}
-
-.one_half .two_third {
-margin-right: 8.3333%;
-width: 63.8889%;
-}
-
-.two_third .one_third {
-margin-right: 6.1224%;
-width: 29.2517%;
-}
-
-.two_third .two_third {
-margin-right: 6.1224%;
-width: 64.6258%;
-}
-
-.two_third .one_fourth {
-margin-right: 6.1224%;
-width: 20.4082%;
-}
-
-.one_half, .two_fourth {
-width: 48%;
-}
-
-.one_third, .two_sixth {
-width: 30.6666%;
-}
-
-.two_third, .four_sixth {
-width: 65.3332%;
-}
-
-
-.profile-box {
-    position:relative;
-    text-align: center;
-    width:auto;
-    height: auto;
-    padding-bottom: 100px;
+circle {
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.8);
+  stroke-width: 32;
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray 0.2s ease;
+  -webkit-animation: spin 20s ease-out infinite;
+          animation: spin 20s ease-out infinite;
 }
