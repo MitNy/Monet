@@ -7,16 +7,15 @@ from thrift.Thrift import TException
 
 import ping_pong.ping_pong
 
-socket = TSocket.TSocket('localhost', 9090)
+socket = TSocket.TSocket('192.168.0.53', 9090)
 transport = TTransport.TBufferedTransport(socket)
 protocol = TBinaryProtocol.TBinaryProtocol(transport)
 client = ping_pong.ping_pong.Client(protocol)
 
-
-while (1):
+while(1):
     try:
         transport.open()
-        print "ping"
+        print ">> ping to server"
         print client.ping()
         transport.close()
         time.sleep(1)
