@@ -2099,9 +2099,12 @@ svg {
 }
 
 .card > img {
-    width:200px;
+    width:190px;
+	max-height:auto;
     border-radius: 50%;
 }
+
+
 circle {
   fill: transparent;
   stroke: rgba(255, 255, 255, 0.8);
@@ -2111,3 +2114,4 @@ circle {
   -webkit-animation: spin 20s ease-out infinite;
           animation: spin 20s ease-out infinite;
 }
+
