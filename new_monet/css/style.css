@@ -386,10 +386,20 @@ section.callaction {
 /* --- box --- */
 
 .box {
-	width: 100%;
+	width:100%;
     border-bottom: 2px solid;
 }
+
+.box-gray a {
+	text-decoration:none;
+	color:black;
+}
+
+.box-gray a:hover {
+	color:black;
+}
 .box-gray  {
+	height:200px;
 	background: #f8f8f8;
 	padding: 20px 20px 30px;
 }
@@ -2100,7 +2110,7 @@ svg {
 
 .card > img {
     width:190px;
-	max-height:auto;
+    max-height:auto;
     border-radius: 50%;
 }
 
@@ -2115,3 +2125,22 @@ circle {
           animation: spin 20s ease-out infinite;
 }
 
+
+.modal-img {
+	text-align:center;
+}
+
+.modal-img img{
+	width:320px;
+	height:auto;
+}
+
+#current a{
+	text-decoration:none;
+	color:black;
+}
+
+ol a {	
+	text-decoration:none !important;
+	color:black;
+}

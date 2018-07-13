@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 	<meta charset="utf-8">
@@ -7,16 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
 	<!-- css -->
+	<link href="css/side.css" rel="stylesheet"/>
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 	<link href="css/jcarousel.css" rel="stylesheet" />
 	<link href="css/flexslider.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet" />
-
-
 	<!-- Theme skin -->
 	<link href="skins/default.css" rel="stylesheet" />
-
 </head>
 
 <body>
@@ -38,6 +36,7 @@
 							<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About</a></li>
                             <li class="active"><a href="members.html">Members</a></li>
+                            <li><a href="publications.html">Publications</a></li>
                             <li><a href="projects.html">Projects</a></li>
                             <li><a href="lectures.html">Lectures</a></li>
                             <li><a href="contact.html">Contact</a></li>
@@ -58,8 +57,19 @@
 					</div>
 				</div>
 			</div>
+            
 		</section>
+        
 		<section id="content">
+            <div class="sidemenu" style="cursor:pointer;">
+                <ul class="sidenav">
+                    <li><a class="active" id="showAll">All</a></li>
+		    <li><a id="showPro">Professor</a></li>
+                    <li><a id="showPhd">Ph.D</a></li>
+                    <li><a id="showMs">M.S.</a></li>
+                </ul>
+            </div>
+            <br>
 			<div class="container">
 				<div class="row">
                     <div class="col-lg-12">
@@ -67,20 +77,24 @@
                 <span class="pullquote-left">Professor</span>
                 <br>
                 <div class="card">
-	<img src="./img/profile.png">
+	<img src="./img/professor.png">
 	<div class="content">
 		<h1>김기일</h1>
         <p>연구 분야 : 이동네트워크, 임베디드 네트워크, 무선네트워크</p>
 		<p>E-mail : kikim@cnu.ac.kr</p>
 	</div>
 </div>
+                        		<br> 
+                    <br>
+			<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline">
+						</div>
+					</div>
+				    </div>
                 </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                <div id="pc">
+
+                    <div id="pc">
                 <span class="pullquote-left">Ph.D Course</span>
                 <br>
                 <div class="card">
@@ -100,14 +114,16 @@
 		<p>E-mail : blah@gmail.com</p>
 	</div>
 </div>
-                    
+                              <br><br>
+			<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline">
+						</div>
+					</div>
+				    </div>          
                 </div>
-                    </div>
-                    </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                    <div id="mc">
+
+                        <div id="mc">
                 <span class="pullquote-left">M.S. Course</span>
                 <br>
                 <div class="card">
@@ -127,11 +143,20 @@
 		<p>E-mail : blah@gmail.com</p>
 	</div>
 </div>
-                    
+                                        <br><br>
+			<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline">
+						</div>
+					</div>
+				    </div>
                 </div>
-                    </div>
-                    </div>
-            </div>
+
+						</div>
+                </div>
+			</div>
+		<div class="dummy" style="height:700px;">
+		</div>
 		</section>
 		<footer>
 				<div class="container">
@@ -163,7 +188,50 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#showAll").click(function() {
+				$("#showAll").addClass("active");
+				$("#showPro").removeClass("active");
+				$("#showPhd").removeClass("active");
+				$("#showMs").removeClass("active");
+				$("#professor").show();
+				$("#pc").show();
+				$("#mc").show();
+			});
 
+			$("#showPro").click(function() {
+				$("#showAll").removeClass("active");
+				$("#showPhd").removeClass("active");
+				$("#showMs").removeClass("active");
+				$("#showPro").addClass("active");
+				$("#professor").show();
+				$("#pc").hide();
+				$("#mc").hide();
+			});
+			$("#showPhd").click(function() {
+				$("#showAll").removeClass("active");
+				$("#showPro").removeClass("active");
+				$("#showMs").removeClass("active");
+				$("#showPhd").addClass("active");
+				$("#pc").show();
+				$("#professor").hide();
+				$("#mc").hide();
+			});
+			$("#showMs").click(function() {
+				$("#showAll").removeClass("active");
+				$("#showPro").removeClass("active");
+				$("#showPhd").removeClass("active");
+				$("#showMs").addClass("active");
+				$("#professor").hide();
+				$("#pc").hide();
+				$("#mc").show();
+	
+			});
+		});
+	</script>
 </body>
 
 </html>
+
+
