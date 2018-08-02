@@ -2144,3 +2144,16 @@ ol a {
 	text-decoration:none !important;
 	color:black;
 }
+
+.modal-body > p {
+	text-align: justify;
+}
+
+.col-lg-12 > p {
+	text-align:justify;
+	line-height:1.3em;
+}
+
+#ij,#ic,#dj,#dc {
+	text-align:justify;
+}

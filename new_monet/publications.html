@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="utf-8">
     <title>Monet</title>
@@ -16,7 +15,6 @@
     <!-- Theme skin -->
     <link href="skins/default.css" rel="stylesheet" />
 </head>
-
 <body>
     <div id="wrapper">
         <!-- start header -->
@@ -29,7 +27,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                        <a class="navbar-brand" href="index.html"><span>M</span>onet</a>
+                        <a class="navbar-brand" href="index.html"><img src="/img/banner.png" alt="logo" style="width:150px; height:auto;"></a>
                     </div>
                     <div class="navbar-collapse collapse ">
                         <ul class="nav navbar-nav">
@@ -183,7 +181,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <br>
 				<div id="pt">
                                 <span class="pullquote-left">Patents</span>
                                 <br>
@@ -201,7 +198,7 @@
                         <!-- row end -->
                     </div>
                 </div>
-            <div class="dummy" style="height:300px;"></div>
+            <div class="dummy" style="height:400px;"></div>
         </section>
         <footer>
             <div class="container">
@@ -248,6 +245,8 @@
 		$("#dj").show();
 		$("#dc").show();
 		$("#pt").show();
+		$("#techTransfer").hide();
+                $("#book").hide();
 		$(".2018").show();
 		$(".2017").show();
 		$(".2016").show();
@@ -268,6 +267,8 @@
                 $("#dj").show();
                 $("#dc").show();
                 $("#pt").show();
+		$("#techTransfer").hide();
+                $("#book").hide();
 		$(".2018").show();
 		$(".2017").hide();
 		$(".2016").hide();
@@ -287,6 +288,8 @@
                 $("#dj").hide();
                 $("#dc").show();
                 $("#pt").show();
+		$("#techTransfer").hide();
+                $("#book").hide();
 		$(".2017").show();
 		$(".2018").hide();
 		$(".2016").hide();
@@ -306,6 +309,8 @@
                 $("#dj").show();
                 $("#dc").hide();
                 $("#pt").show();
+		$("#techTransfer").hide();
+		$("#book").hide();
             	$(".2016").show();
 		$(".2018").hide();
 		$(".2017").hide();
@@ -325,6 +330,8 @@
                 $("#dj").show();
                 $("#dc").hide();
                 $("#pt").show();
+		$("#techTransfer").show();
+		$("#book").hide();
             	$(".2015").show();
 		$(".2018").hide();
 		$(".2017").hide();
@@ -344,6 +351,8 @@
                 $("#dj").show();
                 $("#dc").show();
                 $("#pt").show();
+		$("#techTransfer").show();
+		$("#book").show();
             	$(".others").show();
 		$(".2018").hide();
 		$(".2017").hide();
@@ -363,6 +372,8 @@
 		$("#ic").hide();
 		$("#dj").hide();
 		$("#dc").hide();
+		$("#techTransfer").hide();
+                $("#book").hide();
             });
 
             $("#load-ij-2018").load("/documents/2018_international_journal.html");
@@ -375,15 +386,10 @@
             $("#load-ic-2016").load("/documents/2016_international_conference.html");
             $("#load-ic-2015").load("/documents/2015_international_conference.html");
             $("#load-ic-others").load("/documents/2014_international_conference.html");
-            $("#load-dj-2018").load("/documents/2018_domestic_journal.html");
-            $("#load-dj-2017").load("/documents/2017_domestic_journal.html");
             $("#load-dj-2016").load("/documents/2016_domestic_journal.html");
             $("#load-dj-2015").load("/documents/2015_domestic_journal.html");
             $("#load-dj-others").load("/documents/2014_domestic_journal.html");
-            $("#load-dc-2018").load("/documents/2018_domestic_conference.html");
             $("#load-dc-2017").load("/documents/2017_domestic_conference.html");
-            $("#load-dc-2016").load("/documents/2016_domestic_conference.html");
-            $("#load-dc-2015").load("/documents/2015_domestic_conference.html");
             $("#load-dc-others").load("/documents/2014_domestic_conference.html");
             $("#load2017").load("./2017_publications.html");
             $("#load2016").load("./2016_publications.html");
