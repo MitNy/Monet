@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 	<meta charset="utf-8">
 	<title>Monet</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
 	<!-- css -->
+	<link href="css/side.css" rel="stylesheet"/>
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 	<link href="css/jcarousel.css" rel="stylesheet" />
 	<link href="css/flexslider.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet" />
-
-
 	<!-- Theme skin -->
 	<link href="skins/default.css" rel="stylesheet" />
-
 </head>
-
 <body>
 	<div id="wrapper">
 		<!-- start header -->
@@ -31,16 +27,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-						<a class="navbar-brand" href="home.html"><span>M</span>onet</a>
+						<a class="navbar-brand" href="index.html"><img src="/img/banner.png" alt="logo" style="width:150px; height:auto;"></a>
 					</div>
 					<div class="navbar-collapse collapse ">
 						<ul class="nav navbar-nav">
-							<li><a href="home.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About</a></li>
                             <li><a href="members.html">Members</a></li>
 			    <li><a href="publications.html">Publications</a></li>
-                            <li class="active"><a href="projects.html">Projects</a></li>
+                            <li><a href="projects.html">Projects</a></li>
                             <li><a href="lectures.html">Lectures</a></li>
+			    <li class="active"><a href="activities.html">Activities</a></li>
                             <li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -54,47 +51,45 @@
 					<div class="col-lg-12">
 						<ul class="breadcrumb">
 							<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
-							<li class="active">Projects</li>
+							<li class="active">Activities</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="content">
+			<div class="sidemenu" style="cursor:pointer;">
+                <ul class="sidenav">
+                    <li><a class="active" id="showAll">All</a></li>
+		    <li><a id="showCurrent">2018</a></li>
+                </ul>
+            </div>
+            <br>
 			<div class="container">
 				<div class="row">
                     <div class="col-lg-12">
-                    <span class="pullquote-left">Current Project / Research</span>
+		   <div id="2018_photo">
+                    <span class="pullquote-left">2018</span>
                     <br>
-                        <ul>
-                            <li><a href="./project1.html">Project 1</a></li>
-                            <li>Project 2</li>
-                            <li>Project 3</li>
-                            <li>Project 4</li>
-                            <li>Project 5</li>
-                        </ul>
-                    <br><br>
-                    
+			<a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg" title="Twilight Memories (doraartem)">
+	<img src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" />
+			<a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg" title="Twilight Memories (doraartem)">
+	<img src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" />
+</a>
+</a>
+			<br><br>
                     <div class="row">
 					<div class="col-lg-12">
 						<div class="solidline">
 						</div>
 					</div>
 				</div>
-                    <span class="pullquote-left">Previous Project / Research</span>
-                    <br>
-                    <ul>
-                            <li>Project 1</li>
-                            <li>Project 2</li>
-                            <li>Project 3</li>
-                            <li>Project 4</li>
-                            <li>Project 5</li>
-                        </ul>
+		    </div>
+                     </div>
                     
 						</div>
                 </div>
-			</div>
-            <br><br><br><br>
+            	<div class="dummy" style="height:250px;"></div>
 		</section>
 		<footer>
 				<div class="container">
@@ -102,9 +97,7 @@
 						<div class="col-lg-6">
 							<div class="copyright">
 								<p>Copyright &copy; 2018 Monet All right reserved.</p>
-								<div class="credits">
-									Designed by
-								</div>
+								<div class="credits">Designed by</div>
 							</div>
 						</div>
 					</div>
@@ -126,7 +119,40 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		closeBtn: false,
+		helpers: {
+			title: { type: 'outside' }
+		}
+	});
+			$("#showAll").click(function() {
+				$("#showAll").addClass("active");
+				$("#showCurrent").removeClass("active");
+				$("#showPrevious").removeClass("active");
+				$("#current").show();
+				$("#previous").show();
+			});
 
+			$("#showCurrent").click(function() {
+				$("#showAll").removeClass("active");
+				$("#showPrevious").removeClass("active");
+				$("#showCurrent").addClass("active");
+				$("#current").show();
+				$("#previous").hide();
+			});
+			$("#showPrevious").click(function() {
+				$("#showAll").removeClass("active");
+				$("#showCurrent").removeClass("active");
+				$("#showPrevious").addClass("active");
+				$("#previous").show();
+				$("#current").hide();
+			});
+		});
+	</script>
 </body>
 
 </html>

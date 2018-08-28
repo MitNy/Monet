@@ -214,7 +214,7 @@ header .nav .caret {
 .dropdown-menu  {
     box-shadow: none;
     border-radius: 0;
-	border: none;
+    border: none;
 }
 
 .dropdown-menu li:last-child  {
@@ -306,6 +306,7 @@ header ul.nav li ul li ul {
 
 
 ul.nav li.dropdown a {
+	height:auto;
 	z-index:1000;
 	display:block;
 }
@@ -1905,7 +1906,7 @@ article img.pull-right, article .align-right{
 	
 	.navbar-collapse.collapse  {
 		border: none;
-		overflow: hidden;
+		overflow-y:auto;
 	}
 
 	
@@ -2156,4 +2157,9 @@ ol a {
 
 #ij,#ic,#dj,#dc {
 	text-align:justify;
+}
+
+#about {
+	text-align:justify;
+        line-height:1.3em;
 }
