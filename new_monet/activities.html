@@ -27,18 +27,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-						<a class="navbar-brand" href="index.html"><img src="/img/banner.png" alt="logo" style="width:150px; height:auto;"></a>
+						<a class="navbar-brand" href="index"><img src="/img/banner.png" alt="logo" style="width:150px; height:auto;"></a>
 					</div>
 					<div class="navbar-collapse collapse ">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-                            <li><a href="members.html">Members</a></li>
-			    <li><a href="publications.html">Publications</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="lectures.html">Lectures</a></li>
-			    <li class="active"><a href="activities.html">Activities</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+							<li><a href="index">Home</a></li>
+							<li><a href="about">About</a></li>
+                            <li><a href="members">Members</a></li>
+			    <li><a href="publications">Publications</a></li>
+                            <li><a href="projects">Projects</a></li>
+                            <li><a href="lectures">Lectures</a></li>
+			    <li class="active"><a href="activities">Activities</a></li>
+                            <li><a href="contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -61,7 +61,8 @@
 			<div class="sidemenu" style="cursor:pointer;">
                 <ul class="sidenav">
                     <li><a class="active" id="showAll">All</a></li>
-		    <li><a id="showCurrent">2018</a></li>
+		    <li><a id="show2018">2018</a></li>
+		    <li><a id="show2017">2017</a></li>
                 </ul>
             </div>
             <br>
@@ -71,13 +72,14 @@
 		   <div id="2018_photo">
                     <span class="pullquote-left">2018</span>
                     <br>
-			<a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg" title="Twilight Memories (doraartem)">
-	<img src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" />
-			<a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg" title="Twilight Memories (doraartem)">
-	<img src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" />
+			<div class="activities">
+			<a class="fancybox" rel="gallery1" href="/img/activities/20180901_1.png" title="Fall 2018">
+	<img src="/img/activities/20180901_1.png" alt="" /></a>
+			<a class="fancybox" rel="gallery1" href="/img/activities/20180901_2.png" title="Fall 2018">
+	<img src="/img/activities/20180901_2.png" alt="" />
 </a>
-</a>
-			<br><br>
+</div>
+		<br><br>
                     <div class="row">
 					<div class="col-lg-12">
 						<div class="solidline">
@@ -85,6 +87,18 @@
 					</div>
 				</div>
 		    </div>
+			<div id="2017_photo">
+                    <span class="pullquote-left">2017</span>
+                    <br>
+                        <br><br>
+                    <div class="row">
+                                        <div class="col-lg-12">
+                                                <div class="solidline">
+                                                </div>
+                                        </div>
+                                </div>
+                    </div>
+
                      </div>
                     
 						</div>
@@ -97,7 +111,7 @@
 						<div class="col-lg-6">
 							<div class="copyright">
 								<p>Copyright &copy; 2018 Monet All right reserved.</p>
-								<div class="credits">Designed by</div>
+								<div class="credits"></div>
 							</div>
 						</div>
 					</div>
@@ -131,25 +145,25 @@
 	});
 			$("#showAll").click(function() {
 				$("#showAll").addClass("active");
-				$("#showCurrent").removeClass("active");
-				$("#showPrevious").removeClass("active");
-				$("#current").show();
-				$("#previous").show();
+				$("#show2018").removeClass("active");
+				$("#show2017").removeClass("active");
+				$("#2018_photo").show();
+				$("#2017_photo").show();
 			});
 
-			$("#showCurrent").click(function() {
+			$("#show2018").click(function() {
 				$("#showAll").removeClass("active");
-				$("#showPrevious").removeClass("active");
-				$("#showCurrent").addClass("active");
-				$("#current").show();
-				$("#previous").hide();
+				$("#show2017").removeClass("active");
+				$("#show2018").addClass("active");
+				$("#2018_photo").show();
+				$("#2017_photo").hide();
 			});
-			$("#showPrevious").click(function() {
+			$("#show2017").click(function() {
 				$("#showAll").removeClass("active");
-				$("#showCurrent").removeClass("active");
-				$("#showPrevious").addClass("active");
-				$("#previous").show();
-				$("#current").hide();
+				$("#show2018").removeClass("active");
+				$("#show2017").addClass("active");
+				$("#2017_photo").show();
+				$("#2018_photo").hide();
 			});
 		});
 	</script>

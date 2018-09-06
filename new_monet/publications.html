@@ -27,18 +27,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                        <a class="navbar-brand" href="index.html"><img src="/img/banner.png" alt="logo" style="width:150px; height:auto;"></a>
+                        <a class="navbar-brand" href="index"><img src="/img/banner.png" alt="logo" style="width:150px; height:auto;"></a>
                     </div>
                     <div class="navbar-collapse collapse ">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="members.html">Members</a></li>
-                            <li class="active"><a href="publications.html">Publications</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="lectures.html">Lectures</a></li>
-			    <li><a href="activities.html">Activities</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="index">Home</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="members">Members</a></li>
+                            <li class="active"><a href="publications">Publications</a></li>
+                            <li><a href="projects">Projects</a></li>
+                            <li><a href="lectures">Lectures</a></li>
+			    <li><a href="activities">Activities</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -152,12 +152,12 @@
                             </div>
                             <br>
 			</div>
-                            <div id="techTransfer" style="display:none;">
+                            <div id="tt">
                                 <span class="pullquote-left">Technology Transfer</span>
                                 <br>
                                 <ul>
-                                    <div id="load-tt-2015"></div>
-                                    <div id="load-tt-2014"></div>
+                                    <div id="load-tt-2015" class="2015"></div>
+                                    <div id="load-tt-2014" class="others"></div>
                                 </ul>
                                 <br>
                                 <div class="row">
@@ -168,11 +168,11 @@
                                 </div>
                             </div>
 				<br>
-                            <div id="book" style="display:none;">
+                            <div id="book">
                                 <span class="pullquote-left">Book</span>
                                 <br>
                                 <ul>
-                                    <div id="load-book-2014"></div>
+                                    <div id="load-book-2014" class="others"></div>
                                 </ul>
                                 <br>
                                 <div class="row">
@@ -186,6 +186,10 @@
                                 <span class="pullquote-left">Patents</span>
                                 <br>
                                 <ul>
+					<div id="load-p-2018" class="2018"></div>
+					<div id="load-p-2017" class="2017"></div>
+					<div id="load-p-2016" class="2016"></div>
+					<div id="load-p-2014" class="others"></div>
                                 </ul>
                                 <br>
                                 <div class="row">
@@ -208,7 +212,6 @@
                         <div class="copyright">
                             <p>Copyright &copy; 2018 Monet All right reserved.</p>
                             <div class="credits">
-                                Designed by
                             </div>
                         </div>
                     </div>
@@ -245,9 +248,9 @@
 		$("#ic").show();
 		$("#dj").show();
 		$("#dc").show();
+		$("#book").show();
 		$("#pt").show();
-		$("#techTransfer").hide();
-                $("#book").hide();
+		$("#tt").show();
 		$(".2018").show();
 		$(".2017").show();
 		$(".2016").show();
@@ -268,7 +271,7 @@
                 $("#dj").show();
                 $("#dc").show();
                 $("#pt").show();
-		$("#techTransfer").hide();
+		$("#tt").hide();
                 $("#book").hide();
 		$(".2018").show();
 		$(".2017").hide();
@@ -289,7 +292,7 @@
                 $("#dj").hide();
                 $("#dc").show();
                 $("#pt").show();
-		$("#techTransfer").hide();
+		$("#tt").hide();
                 $("#book").hide();
 		$(".2017").show();
 		$(".2018").hide();
@@ -310,7 +313,7 @@
                 $("#dj").show();
                 $("#dc").hide();
                 $("#pt").show();
-		$("#techTransfer").hide();
+		$("#tt").hide();
 		$("#book").hide();
             	$(".2016").show();
 		$(".2018").hide();
@@ -331,7 +334,7 @@
                 $("#dj").show();
                 $("#dc").hide();
                 $("#pt").show();
-		$("#techTransfer").show();
+		$("#tt").show();
 		$("#book").hide();
             	$(".2015").show();
 		$(".2018").hide();
@@ -352,7 +355,7 @@
                 $("#dj").show();
                 $("#dc").show();
                 $("#pt").show();
-		$("#techTransfer").show();
+		$("#tt").show();
 		$("#book").show();
             	$(".others").show();
 		$(".2018").hide();
@@ -373,7 +376,7 @@
 		$("#ic").hide();
 		$("#dj").hide();
 		$("#dc").hide();
-		$("#techTransfer").hide();
+		$("#tt").hide();
                 $("#book").hide();
             });
 
@@ -392,11 +395,17 @@
             $("#load-dj-others").load("/documents/2014_domestic_journal.html");
             $("#load-dc-2017").load("/documents/2017_domestic_conference.html");
             $("#load-dc-others").load("/documents/2014_domestic_conference.html");
-            $("#load2017").load("./2017_publications.html");
+            $("#load-p-2018").load("/documents/2018_patents.html");
+	    $("#load-p-2017").load("/documents/2017_patents.html");
+	    $("#load-p-2016").load("/documents/2016_patents.html");
+	    $("#load-p-2014").load("/documents/2014_patents.html");
+	    $("#load-tt-2015").load("/documents/2015_techTransfer.html");
+	    $("#load-tt-2014").load("/documents/2014_techTransfer.html");
+	    $("#load-book-2014").load("/documents/2014_books.html");
+	    $("#load2017").load("./2017_publications.html");
             $("#load2016").load("./2016_publications.html");
             $("#load2015").load("./2015_publications.html");
             $("#loadOthers").load("./others_publications.html");
-
         });
 
     </script>

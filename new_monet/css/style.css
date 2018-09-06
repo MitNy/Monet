@@ -2163,3 +2163,9 @@ ol a {
 	text-align:justify;
         line-height:1.3em;
 }
+
+.activities img{
+        width:300px !important;
+        height:auto !important;
+}
+
