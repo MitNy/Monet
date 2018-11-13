@@ -1,0 +1,1 @@
+g++ DEManagement_server.skeleton.cpp kuber_types.cpp DEManagement.cpp -o ser -lthrift

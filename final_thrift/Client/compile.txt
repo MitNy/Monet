@@ -1,0 +1,1 @@
+ g++ kuber_types.cpp DEManagement.cpp kuber_cli.cpp -o kuber_cli -lthrift
